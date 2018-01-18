@@ -1,0 +1,24 @@
+<section class="app">
+  <section class="items-list">
+    <app-product-item
+      *ngFor="let product of productsService.products"
+      [product]="product"
+      [addToCart]="addToCart">
+    </app-product-item>
+    <div class="clearfix"></div>
+  </section>
+
+  <section class="cart">
+    <app-cart-item
+      *ngFor="let product of cartService.getProductsList()"
+      [product]="product"
+      [removeProduct]="removeProduct">
+    </app-cart-item>
+    <div *ngIf="cartService.getProductsList().length">
+      <p>Total price: {{cartService.getTotalPrice()}}</p>
+      <p>Discount: -{{cartService.getDiscount()}}</p>
+      <p>Discount price: {{cartService.getDiscountPrice()}}</p>
+    </div>
+  </section>
+  <div class="clearfix"></div>
+</section>

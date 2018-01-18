@@ -1,0 +1,10 @@
+.price {
+  display: block;
+}
+
+.product-display {
+  border: 1px solid black;
+  float: left;
+  margin: 5px;
+  width: calc(25% - 10px);
+}

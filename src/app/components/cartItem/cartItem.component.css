@@ -1,0 +1,17 @@
+.cart-item {
+  border: 1px solid black;
+}
+
+.info {
+  display: inline-block;
+  width: calc(100% - 70px);
+}
+
+.product-count {
+  display: inline-block;
+  width: 30px;
+}
+
+.price {
+  display: block;
+}
